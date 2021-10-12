@@ -5,7 +5,7 @@ class App extends Component {
     const style = {
       display: 'flex',
       height: '50px',
-      width: '350px',
+      width: '3550px',
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'blue',
