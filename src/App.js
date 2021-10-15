@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-class App extends Component {
-  render() {
-    const style = {
-      display: 'flex',
-      height: '50px',
-      width: '3550px',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'blue',
-      padding: '16px',
-      color: 'white',
-      fontSize: '36px', 
-    };
+const App = () => {
+  const [data, setData] = useState('');
+  useEffect(() => {
+    axios.get('https://8565c6b5-f051-4dfe-8d55-37738289754f.mock.pstmn.io/jeju')
+      .then(res => setData(res.data))
+  }, []);
 
-    return <div style={style}>코멘토 안녕하세요!</div>;
-  }
-}
+  return(
+    <div>
+      {data}
+    </div>
+  )
+} 
 
 export default App;
