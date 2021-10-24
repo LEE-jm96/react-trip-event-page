@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TripItem from './TripItem';
 import axios from 'axios';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const TripListBlock = styled.div`
@@ -26,7 +28,7 @@ const TripList = () => {
             setLoading(true);
             try{
                 const response = await axios.get(
-                    `https://8565c6b5-f051-4dfe-8d55-37738289754f.mock.pstmn.io/locations`,
+                    `${process.env.REACT_APP_API_KEY}`,
                 );
                 setLoca(response.data.locations);
                 console.log(response);
