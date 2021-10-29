@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TripItemBlock = styled.div`
+const Container = styled.div`
     display: flex;
     .thumbnail{
         margin-right: 1rem;
@@ -15,7 +15,6 @@ const TripItemBlock = styled.div`
     .contents{
         h2{
             margin: 0;
-            color: green;
         }
         p{
             margin: 0:
@@ -24,6 +23,9 @@ const TripItemBlock = styled.div`
             white-space: normal;
             font-size: 14px;
         }
+    }
+    .sights{
+        color: green;
     }
     & + &{
         margin-top: 3rem;
@@ -34,9 +36,9 @@ const TripItemBlock = styled.div`
 // eslint-disable-next-line react/prop-types
 const TripItem = ({ deliver }) => {
     // eslint-disable-next-line react/prop-types
-    const { name, desc, sights, thumbnail} = deliver;
+    const { name, desc, sights, thumbnail } = deliver;
     return(
-        <TripItemBlock>
+        <Container>
             {thumbnail && (
                 <div className="thumbnail">
                     <img src={thumbnail} alt="thumbnail"/>
@@ -45,9 +47,9 @@ const TripItem = ({ deliver }) => {
             <div className="contents">
                 <h2>{name}</h2>
                 <p>{desc}</p>
-                <p>{sights}</p>
+                <p className="sights">{sights}</p>
             </div>
-        </TripItemBlock>
+        </Container>
     )
 }
 
