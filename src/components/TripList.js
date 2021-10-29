@@ -1,36 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TripItem from './TripItem';
-import axios from 'axios';
-import dotenv from 'dotenv';
-dotenv.config();
+import {getTrip} from '../apis/tripApis'
 
-
-const TripListBlock = styled.div`
+const Container = styled.div`
     box-sizing: border-box;
     padding-bottom: 3rem;
-    width: 768px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-    margin-top: 2rem;
     @media screen and (max-width: 768px){
-        width: 100%;
         padding-left: 1rem;
-        padding-right; 1rem;
+        padding-right: 1rem;
     }
+    font-family: "HS";
+    background-color: beige; 
 `;
 
 const TripList = () => {
-    const [loca, setLoca] = useState(null);
+    const [loc, setLoca] = useState(null);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
             try{
-                const response = await axios.get(
-                    `${process.env.REACT_APP_API_KEY}`,
-                );
-                setLoca(response.data.locations);
+                const response = getTrip().
+                then((result)=>setLoca(result.data.locations));
                 console.log(response);
             } catch(e){
                 console.log(e);
@@ -41,19 +37,19 @@ const TripList = () => {
     }, []);
 
     if(loading){
-        return <TripListBlock>대기 중...</TripListBlock>;
+        return <Container>대기 중...</Container>;
     }
 
-    if(!loca){
+    if(!loc){
         return null;
 
     }
     return(
-        <TripListBlock>
-            {loca.map(deliver => (
+        <Container>
+            {loc.map(deliver => (
                 <TripItem key={deliver.name} deliver={deliver} />
             ))}
-        </TripListBlock>
+        </Container>
     );
 };
 
