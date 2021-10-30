@@ -8,10 +8,10 @@ const getTrip = async () => {
 }
 
 const getTrip2 = async () => {
-    const response = await axios.get(
+    const response2 = await axios.get(
         `${process.env.REACT_APP_API_KEY2}`
     );
-    return response;
+    return response2;
 }
 
 export {getTrip, getTrip2};
