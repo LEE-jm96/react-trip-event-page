@@ -4,7 +4,6 @@ import ThemeItem from './ThemeItem';
 import { getTheme } from '../apis/tripApis'
 
 const Container = styled.div`
-    display: flex;  
     background-color: beige;
     margin-top: -0.3rem;
 `;

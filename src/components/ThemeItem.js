@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+    margin-top: -0.3rem;
     padding-top: 3rem;
+    margin-left: 2rem;
     .thumbnail{
         img{
             display: block;
@@ -11,7 +13,9 @@ const Container = styled.div`
         }
     }
     .contents{
-        background-color: lightyellow;
+        background-color: white;
+        width: 250px;
+        height: 170px;
         h2{
             margin: 0;
         }
@@ -22,11 +26,12 @@ const Container = styled.div`
             font-size: 14px;
         }
         .discount{
-            margin-left: 8.8rem;
+            margin-left: 10rem;
             border: 2px solid orange;
             border-radius: 50px;
             background-color: orange;
             color: white;
+            font-size: 10px;
         }
         .price_origin{
             text-decoration: line-through;
@@ -57,13 +62,13 @@ const ThemeItem = ({ deliver }) => {
                     </div>
                 )}
                 <div className="contents">
-                    <h4 className="type">{ticket_type}
+                    <h4>{ticket_type}
                         <span className="discount">
                             {discount_percent}할인
                         </span>
                     </h4>
                     <h2>{location}</h2>
-                    <h2>{title}</h2>
+                    <h3>{title}</h3>
                     <span className="price_origin">{price_origin}원</span>
                     <span className="p_discount">{price_discounted}원~</span>
                 </div>
