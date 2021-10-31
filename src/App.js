@@ -1,31 +1,16 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import Home from './pages/Home';
 import TripList from './components/TripList';
-import Button from './components/Button';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"
+import ThemeList from './components/ThemeList';
 
 const App = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
-
   return(
-    <Slider {...settings}>
-      <div>
-        <img src={process.env.PUBLIC_URL + "/jeju.jpg"} width="100%" height="700px"/>
-      </div>
-      <div>
-        <TripList />
-      </div>
-      <div>
-        <Button/>
-      </div>
-    </Slider>
+    <div>
+      <Route Path="/" component={Home} exact={true} />
+      <Route path="/locations" component={TripList} />
+      <Route path="/themes" component={ThemeList} />
+    </div>
   ) 
 };
 
