@@ -3,16 +3,22 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
+    margin-top: -0.3rem;
+    padding-top: 3rem;
+    margin-left: 2rem;
     .thumbnail{
+        border-radius: 70%;
+        overflow: hidden;
         margin-right: 1rem;
         img{
             display: block;
-            width: 160px;
-            height: 100px;
+            width: 150px;
+            height: 140px;
             object-fit: cover;
         }
     }
     .contents{
+        margin-top: 1rem;
         h2{
             margin: 0;
         }

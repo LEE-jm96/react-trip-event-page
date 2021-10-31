@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TripItem from './TripItem';
-import {getTrip} from '../apis/tripApis'
+import {getLoc} from '../apis/tripApis'
 
 const Container = styled.div`
     box-sizing: border-box;
@@ -25,8 +25,7 @@ const TripList = () => {
         const fetchData = async () => {
             setLoading(true);
             try{
-                const response = getTrip().
-                then((result)=>setLoca(result.data.locations));
+                const response = getLoc().then((result)=>setLoca(result.data.locations));
                 console.log(response);
             } catch(e){
                 console.log(e);
