@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-trip-event-page/static/css/main.1dad7207.chunk.css",
-    "main.js": "/react-trip-event-page/static/js/main.9008bd96.chunk.js",
-    "main.js.map": "/react-trip-event-page/static/js/main.9008bd96.chunk.js.map",
+    "main.js": "/react-trip-event-page/static/js/main.7ce02c3e.chunk.js",
+    "main.js.map": "/react-trip-event-page/static/js/main.7ce02c3e.chunk.js.map",
     "runtime-main.js": "/react-trip-event-page/static/js/runtime-main.b825a65d.js",
     "runtime-main.js.map": "/react-trip-event-page/static/js/runtime-main.b825a65d.js.map",
     "static/js/2.44f2deb3.chunk.js": "/react-trip-event-page/static/js/2.44f2deb3.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.b825a65d.js",
     "static/js/2.44f2deb3.chunk.js",
     "static/css/main.1dad7207.chunk.css",
-    "static/js/main.9008bd96.chunk.js"
+    "static/js/main.7ce02c3e.chunk.js"
   ]
 }
