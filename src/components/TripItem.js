@@ -7,7 +7,6 @@ const Container = styled.div`
     padding-top: 3rem;
     margin-left: 2rem;
     .thumbnail{
-        border-radius: 70%;
         overflow: hidden;
         margin-right: 1rem;
         img{
