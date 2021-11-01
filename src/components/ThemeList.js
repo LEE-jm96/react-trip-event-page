@@ -7,6 +7,7 @@ import { getTheme } from '../apis/tripApis'
 
 const Container = styled.div`
     background-color: beige;
+    padding-bottom: 1rem;
 `
 const Box1 = styled.div`
     display: flex;
@@ -21,6 +22,28 @@ const Box2  = styled.div`
         padding-right: 1rem;
     }
     font-family: "HS";
+`;
+
+const text = "제주 상품 더보기";
+const Font = styled.div`
+    width: 150px;
+    font-family: "HS";
+    text-align: center;
+    background: #1AAB8A;
+    color:#fff;
+    border-radius: 30px;
+    position: relative;
+    height: 60px;
+    font-size:1.4rem;
+    padding: 0 1em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline: none;
+    margin-left: 15rem;
+    &:hover{
+        background:#fff;
+        color:#1AAB8A;
+    }
 `;
 
 const ThemeList = () => {
@@ -61,8 +84,10 @@ const ThemeList = () => {
                     ))}
                 </Box2>
             </Box1>
+            <Font>
+                {text}
+            </Font>
         </Container>
-        
     );
 };
 

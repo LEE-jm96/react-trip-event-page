@@ -25,7 +25,7 @@ const Font = styled.div`
 
 const Container = styled.div`
     display: flex;
-    width: 500px;
+    width: 300px;
     margin: 0 auto;
     @media screen and(max-width: 768px){
         width: 100%;
@@ -34,7 +34,7 @@ const Container = styled.div`
 `;
 
 const Btn = styled.div`
-    font-size: 1.5rem;
+    font-size: 0.83rem;
     font-family: "HS";
     border: 6px solid orange;
     cursor: pointer;

@@ -7,17 +7,16 @@ const Container = styled.div`
     margin-left: 2rem;
     .thumbnail{
         img{
-            display: block;
-            width: 450px;
-            height: 300px;
-            margin-left: -4rem;
+            width: 300px;
+            height: 200px;
+            margin-left: -2.5rem;
         }
     }
     .contents{
         background-color: white;
-        width: 450px;
+        width: 300px;
         height: 180px;
-        margin-left: -4rem;
+        margin-left: -2.5rem;
         h2{
             margin: 0;
         }
@@ -28,7 +27,7 @@ const Container = styled.div`
             font-size: 14px;
         }
         .discount{
-            margin-left: 22rem;
+            margin-left: 12.5rem;
             border: 2px solid orange;
             border-radius: 50px;
             background-color: orange;
