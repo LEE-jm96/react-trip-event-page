@@ -16,7 +16,7 @@ const Box1 = styled.div`
 const Box2  = styled.div`
     box-sizing: border-box;
     padding-bottom: 3rem;
-    margin: 0 auto;
+    margin: auto;
     @media screen and (max-width: 768px){
         padding-left: 1rem;
         padding-right: 1rem;
@@ -26,20 +26,19 @@ const Box2  = styled.div`
 
 const text = "제주 상품 더보기";
 const Font = styled.div`
+    margin: auto;
     width: 150px;
     font-family: "HS";
     text-align: center;
     background: #1AAB8A;
     color:#fff;
     border-radius: 30px;
-    position: relative;
-    height: 60px;
-    font-size:1.4rem;
+    height: 40px;
+    font-size: 1.4rem;
     padding: 0 1em;
     cursor:pointer;
     transition:800ms ease all;
     outline: none;
-    margin-left: 15rem;
     &:hover{
         background:#fff;
         color:#1AAB8A;
@@ -84,9 +83,7 @@ const ThemeList = () => {
                     ))}
                 </Box2>
             </Box1>
-            <Font>
-                {text}
-            </Font>
+            <Font>{text}</Font>
         </Container>
     );
 };

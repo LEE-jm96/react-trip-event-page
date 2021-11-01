@@ -2,29 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    margin-top: -0.3rem;
-    padding-top: 3rem;
-    margin-left: 2rem;
+    padding-top: 2rem;
     .thumbnail{
         img{
             width: 300px;
             height: 200px;
-            margin-left: -2.5rem;
+            margin: auto;
         }
     }
     .contents{
         background-color: white;
         width: 300px;
         height: 180px;
-        margin-left: -2.5rem;
+        margin: auto;
         h2{
             margin: 0;
-        }
-        p{
-            margin: 0:
-            line-height: 1.5;
-            white-space: normal;
-            font-size: 14px;
         }
         .discount{
             margin-left: 12.5rem;
