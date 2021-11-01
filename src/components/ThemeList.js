@@ -27,7 +27,7 @@ const ThemeList = () => {
         const fetchData = async () => {
             setLoading(true);
             try{
-                const response = getTheme().then((result) => setTme(result.data.trips));
+                const response = getTheme().then((result) => setTme(result.data.themes));
                 console.log(response);
             } catch(e){
                 console.log(e);

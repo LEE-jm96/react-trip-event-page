@@ -53,7 +53,7 @@ const ThemeItem = ({ deliver }) => {
     // eslint-disable-next-line react/prop-types
     const { location, title, ticket_type,
         // eslint-disable-next-line react/prop-types
-        discount_percent, price_origin, price_discounted,thumbnail } = deliver;
+        discount, price_origin, price_discounted,thumbnail } = deliver;
     return(
         <Container>
                 {thumbnail && (
@@ -64,7 +64,7 @@ const ThemeItem = ({ deliver }) => {
                 <div className="contents">
                     <h4>{ticket_type}
                         <span className="discount">
-                            {discount_percent}할인
+                            {discount}할인
                         </span>
                     </h4>
                     <h2>{location}</h2>
