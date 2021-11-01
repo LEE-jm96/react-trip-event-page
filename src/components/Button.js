@@ -16,10 +16,16 @@ const button = [
     }
 ];
 
+const text = "#내가 원하는 제주 여행은?";
+const Font = styled.div`
+    font-family: "HS";
+    text-align: center;
+    padding-top: 1rem;
+`;
+
 const Container = styled.div`
     display: flex;
-    padding-left: 3rem;
-    width: 768px;
+    width: 500px;
     margin: 0 auto;
     @media screen and(max-width: 768px){
         width: 100%;
@@ -28,21 +34,19 @@ const Container = styled.div`
 `;
 
 const Btn = styled.div`
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-family: "HS";
-    border: 4px solid orange;
+    border: 6px solid orange;
     cursor: pointer;
     white-space: pre;
     text-decoration; none;
     color: inherit;
     padding-bottom: 0.25rem;
-    margin-top: 2rem;
-
+    background-color: white;
     &:hover{
         background-color: orange;
         color: white;
     }
-
     & + & {
         margin-left: 1rem;
     }
@@ -50,11 +54,16 @@ const Btn = styled.div`
 
 const Button = () => {
     return(
+        <><Font>
+            <span>
+                <h2>{text}</h2>
+            </span>
+        </Font>
         <Container>
             {button.map(c => (
                 <Btn key={c.name}>{c.text}</Btn>
             ))}
-        </Container>
+        </Container></>
     )
 }
 

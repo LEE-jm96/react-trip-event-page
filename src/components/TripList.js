@@ -41,8 +41,8 @@ const TripList = () => {
 
     if(!loc){
         return null;
-
     }
+
     return(
         <Container>
             {loc.map(deliver => (

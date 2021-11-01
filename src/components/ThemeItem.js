@@ -8,14 +8,16 @@ const Container = styled.div`
     .thumbnail{
         img{
             display: block;
-            width: 150px;
-            height: 140px;    
+            width: 450px;
+            height: 300px;
+            margin-left: -4rem;
         }
     }
     .contents{
-        background-color: #FFF8DC;
-        width: 150px;
-        height: 160px;
+        background-color: white;
+        width: 450px;
+        height: 180px;
+        margin-left: -4rem;
         h2{
             margin: 0;
         }
@@ -26,24 +28,23 @@ const Container = styled.div`
             font-size: 14px;
         }
         .discount{
-            margin-left: 4rem;
+            margin-left: 22rem;
             border: 2px solid orange;
             border-radius: 50px;
             background-color: orange;
             color: white;
-            font-size: 10px;
-        }
-        .title{
-            font-size: 15px;
+            font-size: 13px;
         }
         .price_origin{
             text-decoration: line-through;
             color: gray;
+            font-size: 20px;
         }
         .p_discount{
             margin-left: 0.5rem;
             text-decoration: none;
             color: red;
+            font-size: 20px;
         }
     }
     & + &{
@@ -59,6 +60,7 @@ const ThemeItem = ({ deliver }) => {
         discount, price_origin, price_discounted,thumbnail } = deliver;
     return(
         <Container>
+            <span>
                 {thumbnail && (
                     <div className="thumbnail">
                         <img src={thumbnail} alt="thumbnail"/>
@@ -70,11 +72,12 @@ const ThemeItem = ({ deliver }) => {
                             {discount}할인
                         </span>
                     </h4>
-                    <h3>{location}</h3>
-                    <h4 className="title">{title}</h4>
+                    <h1>{location}</h1>
+                    <h2 className="title">{title}</h2>
                     <span className="price_origin">{price_origin}원</span>
                     <span className="p_discount">{price_discounted}원~</span>
                 </div>
+            </span>
         </Container>
     )
 }

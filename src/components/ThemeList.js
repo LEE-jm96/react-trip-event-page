@@ -1,14 +1,18 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ThemeItem from './ThemeItem';
+import Button from './Button';
 import { getTheme } from '../apis/tripApis'
 
 const Container = styled.div`
     background-color: beige;
-    margin-top: -0.3rem;
+`
+const Box1 = styled.div`
+    display: flex;
 `;
 
-const Item = styled.div`
+const Box2  = styled.div`
     box-sizing: border-box;
     padding-bottom: 3rem;
     margin: 0 auto;
@@ -49,12 +53,16 @@ const ThemeList = () => {
     }
     return(
         <Container>
-            <Item>
-                {tme.map(deliver => (
-                    <ThemeItem key={deliver.title} deliver={deliver} />
-                ))}
-            </Item>
+            <Button />
+            <Box1>
+                <Box2>
+                    {tme.map(deliver => (
+                        <ThemeItem key={deliver.title} deliver={deliver} />
+                    ))}
+                </Box2>
+            </Box1>
         </Container>
+        
     );
 };
 
