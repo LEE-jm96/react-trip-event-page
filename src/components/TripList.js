@@ -14,7 +14,7 @@ const Container = styled.div`
         padding-right: 1rem;
     }
     font-family: "HS";
-    background-color: beige; 
+    background-color: #FFFFF0;
 `;
 
 const TripList = () => {

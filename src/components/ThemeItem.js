@@ -8,14 +8,14 @@ const Container = styled.div`
     .thumbnail{
         img{
             display: block;
-            width: 250px;
-            height: 200px;            
+            width: 150px;
+            height: 140px;    
         }
     }
     .contents{
-        background-color: white;
-        width: 250px;
-        height: 170px;
+        background-color: #FFF8DC;
+        width: 150px;
+        height: 160px;
         h2{
             margin: 0;
         }
@@ -26,12 +26,15 @@ const Container = styled.div`
             font-size: 14px;
         }
         .discount{
-            margin-left: 10rem;
+            margin-left: 4rem;
             border: 2px solid orange;
             border-radius: 50px;
             background-color: orange;
             color: white;
             font-size: 10px;
+        }
+        .title{
+            font-size: 15px;
         }
         .price_origin{
             text-decoration: line-through;
@@ -67,8 +70,8 @@ const ThemeItem = ({ deliver }) => {
                             {discount}할인
                         </span>
                     </h4>
-                    <h2>{location}</h2>
-                    <h3>{title}</h3>
+                    <h3>{location}</h3>
+                    <h4 className="title">{title}</h4>
                     <span className="price_origin">{price_origin}원</span>
                     <span className="p_discount">{price_discounted}원~</span>
                 </div>

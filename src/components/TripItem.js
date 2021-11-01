@@ -52,7 +52,7 @@ const TripItem = ({ deliver }) => {
             <div className="contents">
                 <h2>{name}</h2>
                 <p>{desc}</p>
-                <p className="sights">{sights}</p>
+                <p className="sights">추천명소: {sights}</p>
             </div>
         </Container>
     )
